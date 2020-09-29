@@ -4,23 +4,32 @@ import Browser
 import Html exposing (Html, div, h1, text)
 
 
+type alias Model =
+    Int
+
+
+init : Model
+init =
+    0
+
+
 titleText : String
 titleText =
     "== type writer =="
 
 
-view : Int -> Html a
-view i =
+view : Model -> Html a
+view m =
     div []
         [ h1 [] [ text titleText ]
-        , text (String.fromInt i)
+        , text (String.fromInt m)
         ]
 
 
-main : Program () () a
+main : Program () Model a
 main =
     Browser.sandbox
-        { init = ()
-        , view = \_ -> view 4
-        , update = \_ _ -> ()
+        { init = init
+        , view = view
+        , update = \_ _ -> 34
         }
