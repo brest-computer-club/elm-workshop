@@ -1,36 +1,13 @@
-module Main exposing (myFunc)
+module Main exposing (main)
+
+import Browser
+import Html
 
 
-type alias User =
-    { name : String
-    , age : Int
-    }
-
-
-type Age
-    = Adult Int
-    | Child
-
-
-ageToInt : Age -> Int
-ageToInt a =
-    case a of
-        Adult age ->
-            age
-
-        Child ->
-            5
-
-
-type alias Name =
-    String
-
-
-user : () -> Age -> Name -> User
-user _ =
-    \a name -> User name (ageToInt a)
-
-
-myFunc : User
-myFunc =
-    Debug.log "->" (user () (Adult 231) "salut")
+main : Program () () msg
+main =
+    Browser.sandbox
+        { init = ()
+        , view = \_ -> Html.text "salut"
+        , update = \_ _ -> ()
+        }
