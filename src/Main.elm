@@ -1,23 +1,26 @@
 module Main exposing (main)
 
 import Browser
-import Html
+import Html exposing (Html, div, h1, text)
 
 
 titleText : String
 titleText =
-    (\str -> String.repeat 4 str |> String.reverse |> String.toUpper) "hello"
+    "== type writer =="
 
 
-title : Html.Html a
-title =
-    Html.h1 [] [ Html.text titleText ]
+view : Int -> Html a
+view i =
+    div []
+        [ h1 [] [ text titleText ]
+        , text (String.fromInt i)
+        ]
 
 
 main : Program () () a
 main =
     Browser.sandbox
         { init = ()
-        , view = \_ -> title
+        , view = \_ -> view 4
         , update = \_ _ -> ()
         }
