@@ -1,5 +1,8 @@
 # Elm Workshop
 
+## Videos
+- [episode 1](https://www.youtube.com/watch?v=-_G7pk0M1QM). For the code, see the [branch ep1](https://github.com/brest-computer-club/elm-workshop/tree/ep1)
+
 ## Pre workshop
 
 - install elm : https://guide.elm-lang.org/install/elm.html
