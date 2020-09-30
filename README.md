@@ -9,6 +9,7 @@
 ## Helpers
 - elm documentation : https://guide.elm-lang.org/
 - elm packages : https://package.elm-lang.org/
+- elm architecture : https://808.ninja/web-programmer/elm-architecture-flow-diagram
 
 ## Workshop Steps
 1. run a simple hello-world
